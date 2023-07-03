@@ -25,14 +25,15 @@ foreach(Student name in StudentList)
     Console.WriteLine(name.GetStudent());
 }
 
-double TotalGrade = 0;
+double totalGrade = 0.0;
 
-foreach(Student student in StudentList)
+foreach (Student student in studentList)
 {
-    TotalGrade = (TotalGrade += student.GradeStudent)/StudentList.Count;
+    totalGrade += student.GradeStudent;
 }
+double averangeGrade = totalGrade / studentList.Count;
 
-Console.WriteLine("\nla media totale è " + TotalGrade);
+Console.WriteLine("\nla media totale è " + averangeGrade);
 
 Console.Write("\nlo/a studente/ssa con il voto più alto è: ");
 
